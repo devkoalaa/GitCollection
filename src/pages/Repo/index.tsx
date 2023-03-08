@@ -30,7 +30,7 @@ interface GitHubIssue {
   }
 }
 
-export const Repo: React.FunctionComponent = () => {
+const Repo: React.FunctionComponent = () => {
   const [repository, setRepository] = React.useState<GitHubRepository | null>(null)
   const [issues, setIssues] = React.useState<GitHubIssue[]>([])
   const { params } = useRouteMatch<RepositoryParams>()
@@ -91,3 +91,5 @@ export const Repo: React.FunctionComponent = () => {
     </>
   )
 }
+
+export default Repo

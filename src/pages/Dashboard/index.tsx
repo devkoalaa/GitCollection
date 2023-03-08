@@ -14,7 +14,7 @@ interface GitHubRepository {
   }
 }
 
-export const Dashboard: React.FunctionComponent = () => {
+const Dashboard: React.FunctionComponent = () => {
   const [repos, setRepos] = React.useState<GitHubRepository[]>(() => {
     const storageRepos = localStorage.getItem('@GitCollection:repositories')
 
@@ -80,3 +80,5 @@ export const Dashboard: React.FunctionComponent = () => {
     </>
   )
 }
+
+export default Dashboard
